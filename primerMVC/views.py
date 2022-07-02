@@ -8,3 +8,8 @@ from .models import Familiar
 
 def render_test_view(request):
     return render(request, 'primerMVC/test.html')
+
+def render_view_familiares(request):
+    objects = Familiar.objects.all()
+    print({"familiar":objects})
+    return render(request, 'primerMVC/familiares.html', context={"familiar":objects})
