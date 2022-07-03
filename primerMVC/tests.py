@@ -15,5 +15,5 @@ def create_familiares():
     muchacho.save()
 
 def get_familiares():
-    global FAMILIARES
-    FAMILIARES = Familiar.objects.all()
+    # global FAMILIARES
+    return Familiar.objects.all()
