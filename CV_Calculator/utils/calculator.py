@@ -16,4 +16,4 @@ def cv_calculator(Q,p1,p2,grav_esp):
     """
     delta_P = diff_pressure(p1,p2)
 
-    return Q * math.sqrt(Q / delta_P)
+    return Q * math.sqrt(grav_esp / delta_P)

@@ -13,3 +13,7 @@ class Familiar(Base):
     apellido = models.CharField(max_length=80, null=False)
     edad = models.IntegerField(null=False)
 
+    def __getitem__(self, key):
+        """ Función que nos permite getear los datos como si fuera un diccionario """
+        return self.__dict__[key]
+
